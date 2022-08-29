@@ -17,7 +17,6 @@ export class Controller {
     try {
       const id = req.params.id;
       const response = await this.service.update(req.body, id);
-      console.log(req.body, response);
       res.status(200).send(response);
     } catch (e) {
       badRequest(e, res);

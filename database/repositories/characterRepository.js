@@ -6,17 +6,12 @@ export class CharacterRepositoryMongoDb {
   }
 
   async update(character) {
-    const findedCharacter = await characterDb.findOneAndUpdate(
-      { id: character.id },
-      character,
-      { new: true }
-    );
-    console.log(findedCharacter);
-    return findedCharacter;
+    return await characterDb.findOneAndUpdate({ id: character.id }, character, {
+      new: true,
+    });
   }
 
   async find(characterId) {
-    console.log(characterId);
     return await characterDb.findOne({ id: characterId });
   }
 

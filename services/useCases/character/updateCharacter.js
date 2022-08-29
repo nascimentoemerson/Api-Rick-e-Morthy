@@ -10,7 +10,7 @@ export class UpdateCharacterUseCase {
     const findedCharacter = await this.findCharacterById.execute(characterId);
     const updatedCharacter = Object.assign(findedCharacter, characterUpdated);
     const validatedCharacter = new CharacterEntity(updatedCharacter);
-    validatedCharacter.validate()
+    validatedCharacter.validate();
     return await this.repository.update(validatedCharacter.getCharacter());
   }
 }
