@@ -19,7 +19,6 @@ app.use(cors());
 app.use("/characters", character.route());
 app.use("/users", user.route());
 
-
 app.listen(3000, () => {
   console.log("Servidor rodando em: htpp://localhost:3000");
 });

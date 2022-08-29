@@ -6,6 +6,7 @@ export class CharacterRepositoryMongoDb {
   }
 
   async update(character) {
+    console.log(character);
     return await characterDb.findOneAndUpdate({ id: character.id }, character, {
       new: true,
     });
