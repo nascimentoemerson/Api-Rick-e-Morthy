@@ -1,5 +1,3 @@
-import { JwtHelper } from "../auth/jwt";
-
 export class AuthController {
   constructor(findUserByEmailUseCase, bcryptHelper, jwtHelper) {
     this.findUserByEmail = findUserByEmailUseCase;
@@ -11,7 +9,7 @@ export class AuthController {
       const { email, password } = req.body;
       const user = await this.findUserByEmail.execute(email);
 
-      const passwordIsValid = this.bcryptHelper.comparePasword(
+      const passwordIsValid = this.bcryptHelper.comparePassword(
         password,
         user.password
       );
@@ -20,8 +18,13 @@ export class AuthController {
         throw new Error("Invalid password try again");
       }
 
-      delete user.password;
-      const token = this.jwtHelper.generateToken(user);
+      const tokenData = {
+        id: user.id,
+        email: user.email,
+        image: user.image,
+      };
+
+      const token = this.jwtHelper.generateToken(tokenData);
 
       res.status(200).send({
         accessToken: token,

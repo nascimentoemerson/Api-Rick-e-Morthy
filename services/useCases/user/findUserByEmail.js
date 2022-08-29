@@ -4,9 +4,9 @@ export class FindUserByEmailUseCase {
   }
 
   async execute(email) {
-    const user = await this.repository.FindUserByEmail(email);
+    const user = await this.repository.findUserByEmail(email);
     if (!user) {
-      throw new Error("user not found");
+      throw new Error("User not found");
     }
     return user;
   }
