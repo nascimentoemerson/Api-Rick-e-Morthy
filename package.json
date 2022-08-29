@@ -1,0 +1,21 @@
+{
+  "name": "clone-twitter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
