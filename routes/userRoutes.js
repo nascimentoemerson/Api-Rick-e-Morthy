@@ -7,7 +7,7 @@ export class UserRoutes {
   route() {
     this.router.get("/", (req, res) => this.userControler.find(req, res));
     this.router.post("/create", (req, res) =>
-      this.userControler.create(req, res)
+    this.userControler.create(req, res)
     );
     this.router.patch("/update/:id", (req, res) =>
       this.userControler.update(req, res)
