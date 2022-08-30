@@ -6,7 +6,7 @@ export class DeleteCharacterUseCase {
   async execute(characterId) {
     const deletedCharacter = await this.repository.deleteCharacter(characterId);
     if (!deletedCharacter) {
-      throw new Error("Could not delete character ${characterId");
+      throw new Error(`Could not delete character ${characterId}`);
     }
     return deletedCharacter;
   }

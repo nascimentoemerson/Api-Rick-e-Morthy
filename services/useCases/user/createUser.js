@@ -8,6 +8,6 @@ export class CreateUserUseCase {
   async execute(user) {
     const newUser = new UserEntity(user);
     newUser.validate();
-    return this.repository.create(newUser.getUser());
+    return await this.repository.create(newUser.getUser());
   }
 }

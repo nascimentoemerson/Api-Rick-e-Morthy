@@ -16,7 +16,6 @@ export class Controller {
   async update(req, res) {
     try {
       const id = req.params.id;
-      // console.log(id,await this.service.update(req.body, id))
       const response = await this.service.update(req.body, id);
       res.status(200).send(response);
     } catch (e) {

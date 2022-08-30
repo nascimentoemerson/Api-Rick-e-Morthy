@@ -1,4 +1,4 @@
-import mongo from "mongoose"
+import mongo from "mongoose";
 const { model, Schema } = mongo;
 import { characterSchema } from "./character.js";
 

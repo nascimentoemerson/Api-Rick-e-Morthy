@@ -1,5 +1,4 @@
 import { userDb } from "../mongo/schemas/user.js";
-
 export class UserRepositoryMongoDb {
   async create(user) {
     return await userDb.create(user);

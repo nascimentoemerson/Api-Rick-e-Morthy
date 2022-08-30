@@ -1,4 +1,4 @@
-import mongo from "mongoose"
+import mongo from "mongoose";
 const { model, Schema } = mongo;
 
 export const characterSchema = new Schema({

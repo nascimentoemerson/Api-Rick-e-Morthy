@@ -1,6 +1,5 @@
 import { randomUUID } from "node:crypto";
 import { BcryptHelper } from "../auth/bcrypt.js";
-import { CharacterEntity } from "./character.js";
 
 export class UserEntity {
   constructor(user) {

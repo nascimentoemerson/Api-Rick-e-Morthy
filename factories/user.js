@@ -1,9 +1,9 @@
 import { UserRepositoryMongoDb } from "../database/repositories/userRepository.js";
-import { CreateUserUseCase } from "../services/useCases/user/createUser.js";
-import { UpdateUserUseCase } from "../services/useCases/user/updateUser.js";
-import { DeleteUserUseCase } from "../services/useCases/user/deleteUser.js";
-import { FindUserByIdUseCase } from "../services/useCases/user/findUserById.js";
-import { FindAllUsersUseCase } from "../services/useCases/user/findAllUsers.js";
+import { CreateUserUseCase } from "../services/usecases/user/createUser.js";
+import { UpdateUserUseCase } from "../services/usecases/user/updateUser.js";
+import { DeleteUserUseCase } from "../services/usecases/user/deleteUser.js";
+import { FindAllUsersUseCase } from "../services/usecases/user/findAllUsers.js";
+import { FindUserByIdUseCase } from "../services/usecases/user/findUserById.js";
 import { Services } from "../services/service.js";
 import { UserRoutes } from "../routes/userRoutes.js";
 import { Controller } from "../controllers/controller.js";

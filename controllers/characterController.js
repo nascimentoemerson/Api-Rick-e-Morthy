@@ -9,6 +9,6 @@ export class CharacterController extends Controller {
   async findCharacterByName(req, res) {
     const name = req.body.name;
     const response = await this.findCharacterByName.execute(name);
-    res.status(200).send(response)
+    res.status(200).send(response);
   }
 }
