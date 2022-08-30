@@ -17,9 +17,9 @@ export class CharacterRepositoryMongoDb {
   }
 
   async delete(characterId) {
-    return await characterDb.findOneAndDelete({ characterId });
+    return await characterDb.findOneAndDelete({ id: characterId });
   }
-  
+
   async find(characterId) {
     return await characterDb.findOne({ id: characterId });
   }
