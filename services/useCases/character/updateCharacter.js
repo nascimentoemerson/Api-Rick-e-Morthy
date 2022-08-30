@@ -15,7 +15,7 @@ export class UpdateCharacterUseCase {
     validatedCharacter.validate();
 
     const characterupdated = await this.repository.update(validatedCharacter.getCharacter());
-    console.log("usecase", characterupdated)
+
     return characterupdated
   }
 }
