@@ -1,11 +1,11 @@
 import express, { Router } from "express";
 import cors from "cors";
-
 import { MongoDbConnection } from "./database/mongo/connection/connect.js";
 import { makeUserFactory } from "./factories/user.js";
 import { makeCharacterFactory } from "./factories/character.js";
 import { makeAuthFactory } from "./factories/auth.js";
 import { makeEquipmentsFactory } from "./factories/equipment.js";
+import swaggerUi from "swagger-ui-express"
 
 const ConnectDb = new MongoDbConnection();
 await ConnectDb.ConnectDb();
@@ -24,6 +24,8 @@ app.use("/characters", character.route());
 app.use("/users", user.route());
 app.use("/auth", auth.route());
 app.use("/equipments", equipments.route());
+app.use("/api-docs", swaggerUi.serve)
+app.get("/api-docs", swaggerUi.setup)
 
 app.listen(3000, () => {
   console.log("Servidor rodando em: http://localhost:3000");
