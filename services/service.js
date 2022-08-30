@@ -18,6 +18,7 @@ export class Services {
   }
 
   async update(data, id) {
+    console.log(data)
     return await this.updateUseCase.execute(data, id);
   }
 
