@@ -1,6 +1,5 @@
-import mongo from "mongoose";
+import {mongoose} from "mongoose";
 // import { config } from "dotenv";
-const { connect } = mongo;
 
 // if (process.env.NODE_ENV !== "production") {
 //   config();
@@ -9,6 +8,6 @@ const { connect } = mongo;
 export class MongoDbConnection {
   async ConnectDb() {
     console.log("Atlas Database conectado")
-    await connect(process.env.DATABASE_URL);
+    await mongoose.connect(process.env.DATABASE_URL);
   }
 }
