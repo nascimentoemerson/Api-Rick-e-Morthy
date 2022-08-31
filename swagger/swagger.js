@@ -14,6 +14,11 @@ export const swaggerDocs = {
       url: "http://localhost:3000",
       description: "Desenvolvendo e testando api",
     },
+
+    {
+      url: "https://heroku-api-rick.herokuapp.com/",
+      description: "Production API",
+    },
   ],
   paths: {
     "/users/create": {
