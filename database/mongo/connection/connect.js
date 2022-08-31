@@ -1,6 +1,7 @@
 import mongo from "mongoose";
 import { config } from "dotenv";
 const { connect } = mongo;
+
 if (process.env.NODE_ENV !== "production") {
   config();
 }
