@@ -7,7 +7,6 @@ import { makeAuthFactory } from "./factories/auth.js";
 import swagger from "swagger-ui-express";
 import { swaggerDocs } from "./swagger/swagger.js";
 import { config } from "dotenv";
-const port = process.env.PORT || 3000;
 
 config();
 
