@@ -23,6 +23,7 @@ const auth = makeAuthFactory(router);
 app.use(express.json());
 app.use(cors());
 
+
 app.use("/api-docs", swagger.serve);
 app.use("/api-docs", swagger.setup(swaggerDocs));
 app.use("/characters", character.route());
