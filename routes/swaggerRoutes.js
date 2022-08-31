@@ -3,6 +3,7 @@ export class swaggerRoute {
       this.controller = controller;
       this.router = router;
     }
+    
   
     route() {
       this.router.get("/api-docs", (req, res) =>
